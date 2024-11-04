@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestión de Biblioteca</title>
+    <link rel="stylesheet" href="menu.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="logo">
+        <img class="logo" src="logo cun.png" alt="cum" />
+      </div>
+      <nav class="menu">
+        <button onclick="mostrarSeccion('alumnos')">
+          <i class="icon-alumnos"></i> Alumnos
+        </button>
+        <button onclick="mostrarSeccion('libros')">
+          <i class="icon-libros"></i> Libros
+        </button>
+        <button onclick="mostrarSeccion('reportes')">
+          <i class="icon-reportes"></i> Reportes
+        </button>
+      </nav>
+    </aside>
+
+    <div class="container">
+      <section id="alumnos" class="main-content" style="display: none">
+        <div class="form-container">
+          <h2>Alumnos</h2>
+          <form>
+            <label for="identificacion">Identificación:</label>
+            <input
+              type="text"
+              id="identificacion"
+              placeholder="Ingrese identificación"
+            />
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingrese nombre" />
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" placeholder="Ingrese apellidos" />
+
+            <label for="programa-academico">Programa Académico:</label>
+            <input
+              type="text"
+              id="programa-academico"
+              placeholder="Ingrese programa académico"
+            />
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" placeholder="Ingrese teléfono" />
+
+            <label for="direccion">Dirección:</label>
+            <input type="text" id="direccion" placeholder="Ingrese dirección" />
+
+            <label for="correo">Correo Electrónico:</label>
+            <input
+              type="email"
+              id="correo"
+              placeholder="Ingrese correo electrónico"
+            />
+
+            <div class="button-group">
+              <button type="button" class="btn agregar">Agregar</button>
+              <button
+                type="button"
+                class="btn editar"
+                style="background-color: #ffa000"
+              >
+                Editar
+              </button>
+              <button
+                type="button"
+                class="btn eliminar"
+                style="background-color: #f44336"
+              >
+                Eliminar
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="libros" class="main-content" style="display: none">
+        <div class="form-container">
+          <h2>Libros</h2>
+          <div class="search-container">
+            <label for="buscar-libro">Buscar Libro o Autor:</label>
+            <div class="input-group">
+              <input
+                type="text"
+                id="buscar-libro"
+                placeholder="Ingrese nombre o autor"
+              />
+              <button class="btn buscar">
+                <i class="icon-search"></i> Buscar
+              </button>
+            </div>
+          </div>
+          <p>Resultados de Búsqueda:</p>
+          <div id="resultados-busqueda"></div>
+        </div>
+      </section>
+
+      <section id="reportes" class="main-content" style="display: none">
+        <div class="form-container">
+          <h2>Módulo Reporte</h2>
+          <form>
+            <label for="identificacion">Identificación:</label>
+            <input
+              type="text"
+              id="identificacion"
+              placeholder="Ingrese identificación"
+            />
+            <button
+              type="button"
+              class="icon-buscar"
+              style="position: relative; left: -30px"
+            >
+              🔍
+            </button>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingrese nombre" />
+
+            <label for="apellidos">Apellidos:</label>
+            <input type="text" id="apellidos" placeholder="Ingrese apellidos" />
+
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" placeholder="Ingrese teléfono" />
+
+            <label for="programa">Programa Académico:</label>
+            <input
+              type="text"
+              id="programa"
+              placeholder="Ingrese programa académico"
+            />
+
+            <label for="tipo-reporte">Tipo de Reporte:</label>
+            <input
+              type="text"
+              id="tipo-reporte"
+              placeholder="Ingrese tipo de reporte"
+            />
+
+            <label for="descripcion-reporte">Descripción del Reporte:</label>
+            <textarea
+              id="descripcion-reporte"
+              placeholder="Ingrese la descripción del reporte"
+              rows="4"
+            ></textarea>
+
+            <button type="button" class="btn generar-reporte">
+              Generar Reporte
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      function mostrarSeccion(seccion) {
+        document.getElementById("alumnos").style.display = "none";
+        document.getElementById("libros").style.display = "none";
+        document.getElementById("reportes").style.display = "none";
+        document.getElementById(seccion).style.display = "block";
+      } 
+      
+    </script>
+  </body>
+  <!-- by https://rottioris.site/ -->
+</html>
