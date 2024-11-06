@@ -17,9 +17,13 @@ html {
     background-attachment: fixed;
 }
 
+.btn.actualizar:hover {
+    background-color: #ff8f00;
+}
+
+
 .container {
     display: flex;
-    flex: 1;
     max-width: 1200px;
     margin: 0 auto;
     border-radius: 12px;
@@ -138,6 +142,47 @@ input:focus {
 .btn.buscar:hover {
     background-color: #388e3c;
 }
+
+
+
+/* Botón para agregar libro */
+.btn.agregar {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn.agregar:hover {
+    background-color: #388e3c;
+}
+
+/* Botón para actualizar libro */
+.btn.actualizar {
+    background-color: #5f4517;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn.actualizar:hover {
+    background-color: #241808;
+}
+
 
 #descripcion-reporte {
     display: block;
